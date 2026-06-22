@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    "results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_axis_additive_seed426_steps10000/bias_tables.npz",
+    "results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_pruned_toric_PJ_seed460_steps10000/bias_tables.npz",
+    "results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_relative_2d_table_seed477_steps10000/bias_tables.npz",
+    "results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_toric_PJ_R2_coord_shuffle_seed494_steps10000/bias_tables.npz",
+    "results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_toric_PJ_R2_seed443_steps10000/bias_tables.npz"
+  ],
+  "output_dir": "results/v4_relative_table_geometry_10k",
+  "num_metric_rows": 1440,
+  "num_peak_rows": 1920,
+  "num_aggregate_rows": 30
+}

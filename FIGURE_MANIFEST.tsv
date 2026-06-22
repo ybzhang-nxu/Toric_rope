@@ -1,0 +1,12 @@
+artifact_id	paper_or_bundle_use	bundle_path	source_path	notes
+MT-A00	Main concept figure	figures/fig_mta00_concept_spectral_toric_jet.pdf	MetricToric/paper/figures/fig_mta00_concept_spectral_toric_jet.pdf	Relative lattice to spectral torus to toric jet space.
+MT-A00	Main concept figure source package	figures/fig_concept_spectral_toric_jet_package.zip	MetricToric/paper/figures/fig_concept_spectral_toric_jet_package.zip	Editable/source package for the main concept figure.
+MT-A00	Appendix B lattice-field figure	figures/fig_mta00_lattice_field_toric_pj.pdf	MetricToric/paper/figures/fig_mta00_lattice_field_toric_pj.pdf	Free-lattice-field interpretation of J0 modes and toric spectral jets.
+MT-A00	Appendix B lattice-field source package	figures/fig_lattice_field_toric_pj_package.zip	MetricToric/paper/figures/fig_lattice_field_toric_pj_package.zip	Editable/source package for the lattice-field interpretation figure.
+MT-A02	CIFAR J0 sector intervention	figures/fig_mta02_cifar_sector_intervention.pdf	MetricToric/paper/figures/fig_mta02_cifar_sector_intervention.pdf	CIFAR J0 sector intervention.
+MT-A04	Controlled time-frequency margins	figures/fig_mta04_time_frequency_margins.pdf	MetricToric/paper/figures/fig_mta04_time_frequency_margins.pdf	Controlled time-frequency positive margins.
+MT-A05	NSynth empirical offset-field projection	figures/fig_mta05_nsynth_empirical_projection.pdf	MetricToric/paper/figures/fig_mta05_nsynth_empirical_projection.pdf	NSynth empirical offset-field projection.
+MT-A05	NSynth subset stability margins	figures/fig_mta05_nsynth_subset_margins.pdf	MetricToric/paper/figures/fig_mta05_nsynth_subset_margins.pdf	NSynth subset stability margins.
+MT-A06	NSynth learned-bias random heldout margins	figures/fig_mta06_nsynth_random_holdout_margins.pdf	MetricToric/paper/figures/fig_mta06_nsynth_random_holdout_margins.pdf	NSynth learned-bias random heldout margins.
+MT-A08	CIFAR masked-offset deployment gap	figures/fig_mta08_boundary_holdout.pdf	MetricToric/paper/figures/fig_mta08_boundary_holdout.pdf	CIFAR masked-offset deployment gap.
+MT-A09	TinyImageNet native-grid far-shell diagnostics	figures/fig_mta09_far_shell.pdf	MetricToric/paper/figures/fig_mta09_far_shell.pdf	TinyImageNet native-grid far-shell diagnostics.

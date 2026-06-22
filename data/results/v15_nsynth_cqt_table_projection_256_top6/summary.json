@@ -1,0 +1,93 @@
+{
+  "status": "ok",
+  "data_root": "data/nsynth/nsynth-test",
+  "device": "cuda",
+  "cache_dir": "MetricToric/results/v14_nsynth_cqt_masked_confirm256_rectblock_3seed_2k/cqt_cache",
+  "top_freqs": 6,
+  "dct_atoms": 73,
+  "num_records": 256,
+  "time_tokens": 32,
+  "freq_tokens": 14,
+  "patch_dim": 24,
+  "mean_global": 0.062333960086107254,
+  "std_global": 0.20395763218402863,
+  "rows": [
+    {
+      "basis": "dct_top73",
+      "num_features": 73,
+      "r2": 0.9988278746604919,
+      "mse": 2.4018077965592965e-05,
+      "condition": 1.0000091791152954,
+      "coeff_norm": 0.22797833383083344,
+      "order0_energy": 1.0,
+      "order1_energy": 0.0,
+      "order2_energy": 0.0
+    },
+    {
+      "basis": "dct_top13",
+      "num_features": 13,
+      "r2": 0.8968049883842468,
+      "mse": 0.002114612376317382,
+      "condition": 1.0000025033950806,
+      "coeff_norm": 0.21291549503803253,
+      "order0_energy": 1.0,
+      "order1_energy": 0.0,
+      "order2_energy": 0.0
+    },
+    {
+      "basis": "fft_top6_J2",
+      "num_features": 73,
+      "r2": 0.8939049243927002,
+      "mse": 0.0021740386728197336,
+      "condition": 208805.671875,
+      "coeff_norm": 24.987884521484375,
+      "order0_energy": 73.01431274414062,
+      "order1_energy": 31.861513137817383,
+      "order2_energy": 49.272796630859375
+    },
+    {
+      "basis": "fft_top6_J1",
+      "num_features": 37,
+      "r2": 0.8335948586463928,
+      "mse": 0.003409877186641097,
+      "condition": 112.51338195800781,
+      "coeff_norm": 1.0794168710708618,
+      "order0_energy": 2.2427337169647217,
+      "order1_energy": 1.9973607063293457,
+      "order2_energy": 0.0
+    },
+    {
+      "basis": "fft_top6_J0",
+      "num_features": 13,
+      "r2": 0.7629889845848083,
+      "mse": 0.004856691230088472,
+      "condition": 1.0000001192092896,
+      "coeff_norm": 0.17920538783073425,
+      "order0_energy": 1.0,
+      "order1_energy": 0.0,
+      "order2_energy": 0.0
+    },
+    {
+      "basis": "fft_top6_J2_coord_shuffle",
+      "num_features": 73,
+      "r2": 0.04099792242050171,
+      "mse": 0.01965131238102913,
+      "condition": 208802.71875,
+      "coeff_norm": 46.530372619628906,
+      "order0_energy": 319.96783447265625,
+      "order1_energy": 171.44570922851562,
+      "order2_energy": 233.7265625
+    },
+    {
+      "basis": "constant",
+      "num_features": 1,
+      "r2": 0.0,
+      "mse": 0.02049141749739647,
+      "condition": 1.0,
+      "coeff_norm": 0.02907051146030426,
+      "order0_energy": 1.0,
+      "order1_energy": 0.0,
+      "order2_energy": 0.0
+    }
+  ]
+}

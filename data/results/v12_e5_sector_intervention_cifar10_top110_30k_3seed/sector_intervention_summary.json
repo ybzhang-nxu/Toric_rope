@@ -1,0 +1,12 @@
+{
+  "aggregate_csv": "MetricToric/results/v12_e5_sector_intervention_cifar10_top110_30k_3seed/sector_intervention_aggregate.csv",
+  "dataset": "cifar10",
+  "device": "cuda",
+  "num_checkpoints": 3,
+  "output_dir": "MetricToric/results/v12_e5_sector_intervention_cifar10_top110_30k_3seed",
+  "results_csv": "MetricToric/results/v12_e5_sector_intervention_cifar10_top110_30k_3seed/sector_intervention_results.csv",
+  "rows": 24,
+  "state": "final",
+  "task": "reconstruction",
+  "teacher_bias": "MetricToric/results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_relative_2d_table_seed477_steps10000/bias_tables.npz"
+}

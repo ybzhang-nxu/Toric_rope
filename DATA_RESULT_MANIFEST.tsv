@@ -1,0 +1,38 @@
+artifact_id	bundle_path	source_path	copy_status	notes
+MT-A01	data/results/v4_cifar10_bias_export_10k	MetricToric/results/v4_cifar10_bias_export_10k	copied	CIFAR relative-bias export records.
+MT-A01	data/results/v4_relative_table_geometry_10k	MetricToric/results/v4_relative_table_geometry_10k	copied	Finite-window geometry metrics and spectra.
+MT-A01	data/results/v4_table_projection_cifar10_10k	MetricToric/results/v4_table_projection_cifar10_10k	copied	CIFAR scalar-table projection records.
+MT-A02	data/results/v12_e5_sector_intervention_cifar10_top110_30k_3seed	MetricToric/results/v12_e5_sector_intervention_cifar10_top110_30k_3seed	copied	CIFAR axial/oblique J0 sector intervention.
+MT-A03	data/results/v12_e1_downstream_confirm3_cifar10_10k	MetricToric/results/v12_e1_downstream_confirm3_cifar10_10k	copied	CIFAR downstream baseline sector selection.
+MT-A03	data/results/v12_e1_j1j2_downstream_confirm3_cifar10_10k	MetricToric/results/v12_e1_j1j2_downstream_confirm3_cifar10_10k	copied	CIFAR downstream J1/J2 sector selection.
+MT-A03	data/results/v12_e2_downstream_controls_confirm3_cifar10_10k	MetricToric/results/v12_e2_downstream_controls_confirm3_cifar10_10k	copied	CIFAR downstream controls.
+MT-A04	data/results/v13_time_frequency_jet_positive	MetricToric/results/v13_time_frequency_jet_positive	copied	Controlled time-frequency J1/J2 positive recovery.
+MT-A05	data/results/v15_nsynth_cqt_table_projection_256_top6	MetricToric/results/v15_nsynth_cqt_table_projection_256_top6	copied	NSynth empirical CQT offset-table projection.
+MT-A05	data/results/v16_nsynth_cqt_projection_stability_256_subsets	MetricToric/results/v16_nsynth_cqt_projection_stability_256_subsets	copied	NSynth subset stability records.
+MT-A06	data/results/v17_nsynth_learned_bias_projection_3seed_2k	MetricToric/results/v17_nsynth_learned_bias_projection_3seed_2k	copied	NSynth learned-bias full-window projection.
+MT-A06	data/results/v18_nsynth_learned_bias_holdout_3seed_2k	MetricToric/results/v18_nsynth_learned_bias_holdout_3seed_2k	copied	NSynth learned-bias random in-window holdout.
+MT-A06	data/results/v20_nsynth_matched_j0_control_top18_projection	MetricToric/results/v20_nsynth_matched_j0_control_top18_projection	copied	NSynth matched-J0 top18 projection control.
+MT-A06	data/results/v20_nsynth_matched_j0_control_top36_projection	MetricToric/results/v20_nsynth_matched_j0_control_top36_projection	copied	NSynth matched-J0 top36 projection control.
+MT-A06	data/results/v20_nsynth_matched_j0_control_top18_random	MetricToric/results/v20_nsynth_matched_j0_control_top18_random	copied	NSynth matched-J0 top18 random-holdout control.
+MT-A06	data/results/v20_nsynth_matched_j0_control_top36_random	MetricToric/results/v20_nsynth_matched_j0_control_top36_random	copied	NSynth matched-J0 top36 random-holdout control.
+MT-A06	data/results/v20_nsynth_matched_j0_control_summary.csv	MetricToric/results/v20_nsynth_matched_j0_control_summary.csv	copied	Matched-J0 control summary table.
+MT-A06	data/results/v20_nsynth_matched_j0_control_seed_clustered.csv	MetricToric/results/v20_nsynth_matched_j0_control_seed_clustered.csv	copied	Seed-clustered random-holdout and matched-J0 summary.
+MT-A07	data/results/v14_nsynth_cqt_masked_confirm256_rectblock_3seed_2k	MetricToric/results/v14_nsynth_cqt_masked_confirm256_rectblock_3seed_2k	copied	NSynth/CQT downstream masked-reconstruction boundary.
+MT-A07	data/results/v19_nsynth_cqt_validation_audit	MetricToric/results/v19_nsynth_cqt_validation_audit	copied	NSynth evidence audit.
+MT-A08	data/results/v4_offset_holdout_cifar10_10k	MetricToric/results/v4_offset_holdout_cifar10_10k	copied	CIFAR masked-offset holdout.
+MT-A08	data/results/v4_offset_holdout_reg_cifar10_10k_h10b1_axis	MetricToric/results/v4_offset_holdout_reg_cifar10_10k_h10b1_axis	copied	CIFAR axis-additive regularized holdout control.
+MT-A08	data/results/v4_offset_holdout_eval_controls_dct_h1b10_cifar10_10k	MetricToric/results/v4_offset_holdout_eval_controls_dct_h1b10_cifar10_10k	copied	CIFAR DCT/heldout evaluation controls.
+MT-A09	data/results/v12_e4_compactified_chart_projection_cifar10_10k	MetricToric/results/v12_e4_compactified_chart_projection_cifar10_10k	copied	Compactified-chart projection and extension-risk records.
+MT-A09	data/results/v12_e6_resolution_transfer_tinyimagenet_3seed_fullval	MetricToric/results/v12_e6_resolution_transfer_tinyimagenet_3seed_fullval	copied	TinyImageNet 32-to-64 resolution transfer.
+MT-A09	data/results/v8_mechanism_claim_synthesis	MetricToric/results/v8_mechanism_claim_synthesis	copied	TinyImageNet mechanism/far-shell supporting tables.
+MT-A09	data/results/v9_tinyimagenet_farband_teacher_10k_summary	MetricToric/results/v9_tinyimagenet_farband_teacher_10k_summary	copied	TinyImageNet far-band teacher summary.
+MT-A10	data/results/v12_e0_controlled_sector_recovery	MetricToric/results/v12_e0_controlled_sector_recovery	compact	Aggregate/report/summary/diagnostic PDFs copied; large raw sweep CSV files left source-only.
+MT-A10		MetricToric/results/v12_e0_controlled_sector_recovery/ridge_path.csv	source_only	Omitted large raw ridge path; source path retained for full raw audit.
+MT-A10		MetricToric/results/v12_e0_controlled_sector_recovery/sector_recovery_results.csv	source_only	Omitted large raw sector-recovery rows; source path retained for full raw audit.
+MT-A10	data/results/v12_e10_full_vs_directional_projection	MetricToric/results/v12_e10_full_vs_directional_projection	copied	Full multivariate vs directional projection appendix.
+MT-A10	data/results/v12_e7_conditioning_audit	MetricToric/results/v12_e7_conditioning_audit	compact	Aggregate/report/summary/bootstrap/diagnostic PDFs copied; large raw sweep CSV files left source-only.
+MT-A10		MetricToric/results/v12_e7_conditioning_audit/conditioning_results.csv	source_only	Omitted large raw conditioning rows; source path retained for full raw audit.
+MT-A10		MetricToric/results/v12_e7_conditioning_audit/ridge_path.csv	source_only	Omitted large raw ridge path; source path retained for full raw audit.
+MT-A10	data/results/v8_tinyimagenet_mechanism_summary	MetricToric/results/v8_tinyimagenet_mechanism_summary	copied	TinyImageNet local-pool appendix note.
+MT-A10	data/results/v11e_cifar10_ordinary_classification_relpos_medium_3seed_5k	MetricToric/results/v11e_cifar10_ordinary_classification_relpos_medium_3seed_5k	copied	CIFAR classification negative boundary case.
+MT-A10	data/results/v4_metric_toric_pj_cifar10_10k	MetricToric/results/v4_metric_toric_pj_cifar10_10k	copied	Legacy CIFAR compact-student/student aggregate records.

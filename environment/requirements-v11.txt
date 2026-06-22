@@ -1,0 +1,16 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+torchaudio==2.6.0+cu124
+numpy==2.4.4
+scipy==1.17.1
+matplotlib==3.10.9
+pillow==12.2.0
+scikit-learn==1.8.0
+pandas==3.0.2
+tqdm==4.67.3
+datasets==4.8.5
+librosa==0.11.0
+soundfile==0.13.1
+pytest==9.0.3

@@ -1,0 +1,6 @@
+{
+  "input": "results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_relative_2d_table_seed477_steps10000/bias_tables.npz",
+  "output_dir": "results/v4_table_projection_cifar10_10k",
+  "num_rows": 12960,
+  "num_aggregate_rows": 270
+}

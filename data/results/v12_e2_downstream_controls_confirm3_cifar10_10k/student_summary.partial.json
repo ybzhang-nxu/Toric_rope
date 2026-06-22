@@ -1,0 +1,25 @@
+{
+  "device": "cuda",
+  "dataset": "cifar10",
+  "teacher_bias": "MetricToric/results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_relative_2d_table_seed477_steps10000/bias_tables.npz",
+  "teacher_init": true,
+  "patch_size": 4,
+  "grid_side": 8,
+  "patch_dim": 48,
+  "depth": 6,
+  "dim": 384,
+  "n_heads": 8,
+  "steps": 10000,
+  "seeds": 3,
+  "tasks": [
+    "reconstruction"
+  ],
+  "bases": [
+    "v12_freqsrc_axis_J0_atoms108",
+    "v12_freqsrc_random_J0_atoms108",
+    "v12_freqsrc_table_shuffled_J0_atoms108"
+  ],
+  "runs_done_this_invocation": 9,
+  "wall_sec": 8184.406701564789,
+  "status": "partial"
+}

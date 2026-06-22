@@ -1,0 +1,19 @@
+{
+  "status": "ok",
+  "wav_count": 256,
+  "num_checks": 20,
+  "pass_count": 17,
+  "boundary_count": 3,
+  "fail_count": 0,
+  "review_count": 0,
+  "sources": {
+    "v14": "data/results/v14_nsynth_cqt_masked_confirm256_rectblock_3seed_2k/nsynth_cqt_aggregate.csv",
+    "v15": "data/results/v15_nsynth_cqt_table_projection_256_top6/projection_results.csv",
+    "v16_margins": "data/results/v16_nsynth_cqt_projection_stability_256_subsets/projection_stability_margin_aggregate.csv",
+    "v16_scores": "data/results/v16_nsynth_cqt_projection_stability_256_subsets/projection_stability_aggregate.csv",
+    "v17_scores": "data/results/v17_nsynth_learned_bias_projection_3seed_2k/learned_bias_projection_mean_aggregate.csv",
+    "v17_margins": "data/results/v17_nsynth_learned_bias_projection_3seed_2k/learned_bias_projection_margins_aggregate.csv",
+    "v18_scores": "data/results/v18_nsynth_learned_bias_holdout_ridge_sweep_3seed_2k/learned_bias_holdout_basis_aggregate.csv",
+    "v18_margins": "data/results/v18_nsynth_learned_bias_holdout_ridge_sweep_3seed_2k/learned_bias_holdout_margin_aggregate.csv"
+  }
+}

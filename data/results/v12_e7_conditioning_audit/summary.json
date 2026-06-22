@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    "MetricToric/results/v12_e1_teacher_jetorder_projection_cifar10_10k",
+    "MetricToric/results/v12_e2_frequency_source_projection_cifar10_10k",
+    "MetricToric/results/v12_e4_compactified_chart_projection_cifar10_10k"
+  ],
+  "num_condition_rows": 24000,
+  "num_frequency_stability_rows": 35,
+  "num_ridge_rows": 96000,
+  "output_dir": "MetricToric/results/v12_e7_conditioning_audit"
+}

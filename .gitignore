@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+.venv/
+.env
+.env.*
+.DS_Store
+*.tmp
+*.log
+wandb/
+runs/
+checkpoints/
+data/raw/
+data/datasets/

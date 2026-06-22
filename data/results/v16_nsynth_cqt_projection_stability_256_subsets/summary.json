@@ -1,0 +1,29 @@
+{
+  "status": "ok",
+  "data_root": "data/nsynth/nsynth-test",
+  "device": "cuda",
+  "cache_dir": "MetricToric/results/v14_nsynth_cqt_masked_confirm256_rectblock_3seed_2k/cqt_cache",
+  "subset_sizes": [
+    128,
+    192,
+    256
+  ],
+  "subset_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "top_freqs": 6,
+  "dct_atoms": 73,
+  "ridge": 1e-08,
+  "num_records": 256,
+  "time_tokens": 32,
+  "freq_tokens": 14,
+  "patch_dim": 24,
+  "mean_global": 0.062333960086107254,
+  "std_global": 0.20395763218402863,
+  "num_rows": 77,
+  "num_margin_rows": 66
+}

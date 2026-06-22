@@ -1,0 +1,46 @@
+artifact_id	role	bundle_path	source_path	notes
+MT-A00	figure_builder	code/paper_scripts/build_revision_figures.py	MetricToric/paper/scripts/build_revision_figures.py	Builds revised paper figures including concept and V12-V20 figures.
+MT-A01	figure_builder	code/paper_scripts/build_paper_figures.py	MetricToric/paper/scripts/build_paper_figures.py	Builds legacy/main deployment figures used by the current paper.
+MT-A01	runner	code/scripts/run_v4_relative_geometry.py	MetricToric/code/scripts/run_v4_relative_geometry.py	CIFAR relative-table geometry export.
+MT-A01	runner	code/scripts/run_v4_table_projection.py	MetricToric/code/scripts/run_v4_table_projection.py	CIFAR scalar-table projection.
+MT-A01	diagnostic	code/toric_pj/diagnostics/relative_table_geometry.py	MetricToric/code/toric_pj/diagnostics/relative_table_geometry.py	Finite-window table geometry diagnostics.
+MT-A01	diagnostic	code/toric_pj/diagnostics/basis_projection.py	MetricToric/code/toric_pj/diagnostics/basis_projection.py	J0/J1/J2 basis projection helper.
+MT-A02	runner	code/scripts/run_v12_sector_intervention_eval.py	MetricToric/code/scripts/run_v12_sector_intervention_eval.py	CIFAR J0 axial/oblique intervention entrypoint.
+MT-A02	implementation	code/toric_pj/experiments/v12_sector_intervention_eval.py	MetricToric/code/toric_pj/experiments/v12_sector_intervention_eval.py	CIFAR J0 sector intervention implementation.
+MT-A03	runner	code/scripts/run_v12_teacher_jetorder_projection.py	MetricToric/code/scripts/run_v12_teacher_jetorder_projection.py	CIFAR fixed-budget downstream projection entrypoint.
+MT-A03	runner	code/scripts/run_v12_frequency_source_controls.py	MetricToric/code/scripts/run_v12_frequency_source_controls.py	CIFAR frequency-source control entrypoint.
+MT-A03	implementation	code/toric_pj/experiments/v12_teacher_jetorder_projection.py	MetricToric/code/toric_pj/experiments/v12_teacher_jetorder_projection.py	Downstream sector projection implementation.
+MT-A03	implementation	code/toric_pj/experiments/v12_frequency_source_controls.py	MetricToric/code/toric_pj/experiments/v12_frequency_source_controls.py	Frequency-source control implementation.
+MT-A04	runner	code/scripts/run_v13_time_frequency_jet_positive.py	MetricToric/code/scripts/run_v13_time_frequency_jet_positive.py	Controlled time-frequency recovery entrypoint.
+MT-A04	implementation	code/toric_pj/experiments/v13_time_frequency_jet_positive.py	MetricToric/code/toric_pj/experiments/v13_time_frequency_jet_positive.py	Controlled high-order recovery implementation.
+MT-A05	runner	code/scripts/run_v15_nsynth_cqt_table_projection.py	MetricToric/code/scripts/run_v15_nsynth_cqt_table_projection.py	NSynth empirical CQT table projection entrypoint.
+MT-A05	runner	code/scripts/run_v16_nsynth_cqt_projection_stability.py	MetricToric/code/scripts/run_v16_nsynth_cqt_projection_stability.py	NSynth subset-stability entrypoint.
+MT-A05	implementation	code/toric_pj/experiments/v15_nsynth_cqt_table_projection.py	MetricToric/code/toric_pj/experiments/v15_nsynth_cqt_table_projection.py	NSynth empirical CQT projection implementation.
+MT-A05	implementation	code/toric_pj/experiments/v16_nsynth_cqt_projection_stability.py	MetricToric/code/toric_pj/experiments/v16_nsynth_cqt_projection_stability.py	NSynth subset-stability implementation.
+MT-A06	runner	code/scripts/run_v17_nsynth_learned_bias_projection.py	MetricToric/code/scripts/run_v17_nsynth_learned_bias_projection.py	NSynth learned-bias projection entrypoint.
+MT-A06	runner	code/scripts/run_v18_nsynth_learned_bias_holdout.py	MetricToric/code/scripts/run_v18_nsynth_learned_bias_holdout.py	NSynth random in-window holdout entrypoint.
+MT-A06	implementation	code/toric_pj/experiments/v17_nsynth_learned_bias_projection.py	MetricToric/code/toric_pj/experiments/v17_nsynth_learned_bias_projection.py	Learned-bias projection implementation.
+MT-A06	implementation	code/toric_pj/experiments/v18_nsynth_learned_bias_holdout.py	MetricToric/code/toric_pj/experiments/v18_nsynth_learned_bias_holdout.py	Random in-window holdout implementation.
+MT-A07	runner	code/scripts/run_v14_nsynth_cqt_masked.py	MetricToric/code/scripts/run_v14_nsynth_cqt_masked.py	NSynth downstream boundary entrypoint.
+MT-A07	runner	code/scripts/run_v19_nsynth_cqt_validation_audit.py	MetricToric/code/scripts/run_v19_nsynth_cqt_validation_audit.py	NSynth evidence-audit entrypoint.
+MT-A07	implementation	code/toric_pj/experiments/v14_nsynth_cqt_masked.py	MetricToric/code/toric_pj/experiments/v14_nsynth_cqt_masked.py	NSynth downstream boundary implementation.
+MT-A07	implementation	code/toric_pj/experiments/v19_nsynth_cqt_validation_audit.py	MetricToric/code/toric_pj/experiments/v19_nsynth_cqt_validation_audit.py	NSynth evidence-audit implementation.
+MT-A08	runner	code/scripts/run_v4_offset_holdout.py	MetricToric/code/scripts/run_v4_offset_holdout.py	CIFAR masked-offset deployment entrypoint.
+MT-A08	implementation	code/toric_pj/experiments/v4_offset_holdout.py	MetricToric/code/toric_pj/experiments/v4_offset_holdout.py	CIFAR masked-offset deployment implementation.
+MT-A09	runner	code/scripts/run_v12_compactified_chart_projection.py	MetricToric/code/scripts/run_v12_compactified_chart_projection.py	Compactified-chart deployment entrypoint.
+MT-A09	runner	code/scripts/run_v12_resolution_transfer.py	MetricToric/code/scripts/run_v12_resolution_transfer.py	TinyImageNet resolution-transfer entrypoint.
+MT-A09	implementation	code/toric_pj/experiments/v12_compactified_chart_projection.py	MetricToric/code/toric_pj/experiments/v12_compactified_chart_projection.py	Chart-warped projection implementation.
+MT-A09	implementation	code/toric_pj/experiments/v12_resolution_transfer.py	MetricToric/code/toric_pj/experiments/v12_resolution_transfer.py	Resolution-transfer implementation.
+MT-A09	implementation	code/toric_pj/experiments/v8_theory_diagnostics.py	MetricToric/code/toric_pj/experiments/v8_theory_diagnostics.py	TinyImageNet mechanism summary helper.
+MT-A09	implementation	code/toric_pj/experiments/v9_batch_table_projection.py	MetricToric/code/toric_pj/experiments/v9_batch_table_projection.py	Far-band teacher summary helper.
+MT-A10	runner	code/scripts/run_v12_controlled_sector_recovery.py	MetricToric/code/scripts/run_v12_controlled_sector_recovery.py	Controlled sector-recovery appendix entrypoint.
+MT-A10	runner	code/scripts/run_v12_full_vs_directional_summary.py	MetricToric/code/scripts/run_v12_full_vs_directional_summary.py	Full-vs-directional appendix entrypoint.
+MT-A10	runner	code/scripts/run_v12_conditioning_audit.py	MetricToric/code/scripts/run_v12_conditioning_audit.py	Conditioning-audit appendix entrypoint.
+MT-A10	runner	code/scripts/run_v4_metric_toric_pj.py	MetricToric/code/scripts/run_v4_metric_toric_pj.py	Legacy CIFAR compact-student/classification boundary entrypoint.
+MT-A10	implementation	code/toric_pj/experiments/v12_controlled_sector_recovery.py	MetricToric/code/toric_pj/experiments/v12_controlled_sector_recovery.py	Controlled recovery implementation.
+MT-A10	implementation	code/toric_pj/experiments/v12_full_vs_directional_summary.py	MetricToric/code/toric_pj/experiments/v12_full_vs_directional_summary.py	Full-vs-directional projection summary implementation.
+MT-A10	implementation	code/toric_pj/experiments/v12_conditioning_audit.py	MetricToric/code/toric_pj/experiments/v12_conditioning_audit.py	Conditioning audit implementation.
+MT-A10	implementation	code/toric_pj/experiments/v4_metric_toric_pj.py	MetricToric/code/toric_pj/experiments/v4_metric_toric_pj.py	Legacy CIFAR student implementation.
+MT-A00	model	code/toric_pj/models/toric_pj_bias.py	MetricToric/code/toric_pj/models/toric_pj_bias.py	Toric PJ scalar bias module.
+MT-A00	model	code/toric_pj/models/learnable_toric_pj_bias.py	MetricToric/code/toric_pj/models/learnable_toric_pj_bias.py	Learnable toric PJ scalar bias module.
+MT-A00	model	code/toric_pj/models/toric_pj_rotary.py	MetricToric/code/toric_pj/models/toric_pj_rotary.py	Rotary/PJ model helper retained for code context.

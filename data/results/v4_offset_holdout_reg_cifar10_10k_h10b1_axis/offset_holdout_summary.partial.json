@@ -1,0 +1,19 @@
+{
+  "device": "cuda",
+  "dataset": "cifar10",
+  "teacher_bias": "results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_relative_2d_table_seed477_steps10000/bias_tables.npz",
+  "holdout_radius": 4,
+  "heldout_bias_mse_weight": 10.0,
+  "boundary_smoothness_weight": 1.0,
+  "reg_schedule": "constant",
+  "reg_start_step": 0,
+  "reg_ramp_steps": 0,
+  "steps": 10000,
+  "seeds": 3,
+  "bases": [
+    "axis_plus_toric_residual_R0_top55"
+  ],
+  "runs_done_this_invocation": 2,
+  "wall_sec": 1837.8731935024261,
+  "status": "partial"
+}

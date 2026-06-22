@@ -1,0 +1,9 @@
+dataset,task,basis,seed,mode,score,loss,delta_from_normal
+cifar10,reconstruction,axis_plus_toric_residual_R0_top55,694,normal,0.856103241443634,0.14333689212799072,0.0
+cifar10,reconstruction,axis_plus_toric_residual_R0_top55,694,zero_bias,0.22019320726394653,0.7775859832763672,0.6359100341796875
+cifar10,reconstruction,axis_plus_toric_residual_R0_top55,694,shuffle_bias,0.11822021007537842,0.879067063331604,0.7378830313682556
+cifar10,reconstruction,axis_plus_toric_residual_R0_top55,694,axis_only_bias,0.775581955909729,0.22357869148254395,0.08052128553390503
+cifar10,reconstruction,axis_plus_toric_residual_R0_top55,694,obl_residual_only_bias,0.8009955286979675,0.1982368677854538,0.055107712745666504
+cifar10,reconstruction,axis_plus_toric_residual_R0_top55,694,axis_plus_obl_residual,0.8561035394668579,0.14333535730838776,-2.980232238769531e-07
+cifar10,reconstruction,axis_plus_toric_residual_R0_top55,694,axis_plus_shuffled_residual,0.5843859314918518,0.4141528308391571,0.2717173099517822
+cifar10,reconstruction,axis_plus_toric_residual_R0_top55,694,topk_spectrum_only_bias,0.7473217248916626,0.2517264485359192,0.10878151655197144

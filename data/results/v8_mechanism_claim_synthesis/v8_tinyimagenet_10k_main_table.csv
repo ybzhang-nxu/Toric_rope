@@ -1,0 +1,6 @@
+model,basis,steps,seeds,final,visible,zero,full_minus_visible,radial_r4,radial_r5,radial_band_6_9,heldout_clamp,output_dir
+Relative table,relative_2d_table,10000,"426,526,626",0.838109,0.838117,0.240045,-0.000008,,,,,results/v8_tinyimagenet_relative_10k_3seed
+DCT top110,dct_top110,10000,"426,526,626",0.861306,0.863352,0.283504,-0.002045,0.863309,0.863409,0.270989,0.862991,results/v8_tinyimagenet_dct_top110_10k_3seed_from_relative10k_s426
+Toric/PJ top220,table_informed_toric_PJ_R0_top220,10000,"426,526,626",0.825463,0.862592,0.277453,-0.037129,0.862820,0.858903,0.120021,0.860784,results/v8_tinyimagenet_toric_pj_top220_10k_3seed_from_relative10k_s426
+Mixed residual-DCT32 hard r4,mixed_toric_PJ_R0_top220_residual_dct_top32_trainradial_r4,10000,"426,526,626",0.844904,0.865806,0.255436,-0.020903,0.865806,0.861934,0.256508,0.847686,results/v8_tinyimagenet_mixed_residual_dct32_trainradial_r4_10k_3seed_from_relative10k_s426
+Mixed residual-DCT32 soft w=1,mixed_toric_PJ_R0_top220_residual_dct_top32_soft_radial_w1,10000,"426,526,626",0.850741,0.864414,0.261846,-0.013673,0.864508,0.864034,0.233884,0.863165,results/v8_tinyimagenet_soft_radial_mask_w1_10k_3seed_from_relative10k_s426

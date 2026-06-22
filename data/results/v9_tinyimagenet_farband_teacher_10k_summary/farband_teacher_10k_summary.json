@@ -1,0 +1,43 @@
+{
+  "thresholds": {
+    "full_gt_soft_w1_10k": 0.8507407903671265,
+    "r6_9_gt_hard_r4_10k": 0.2565083901087443,
+    "gap_ge_soft_w1_10k": -0.013672888278961182,
+    "r0_4_ge_hard_r4_10k": 0.8658063213030497
+  },
+  "candidate": {
+    "candidate": "farband_teacher_w3_10k_3seed",
+    "output_dir": "results/v9_tinyimagenet_farband_teacher_w3_10k_3seed_from_relative10k_s426",
+    "n_seeds": 3,
+    "far_band_teacher_mse_weight": 3.0,
+    "far_band_teacher_range": "6-9",
+    "full": 0.8676494161287943,
+    "full_std": 0.007057354004024794,
+    "visible": 0.8729779322942098,
+    "gap": -0.005328516165415446,
+    "r0_4": 0.8726677497227987,
+    "r0_4_std": 0.0031410052136117356,
+    "r4_5": 0.28868744770685834,
+    "r5_6": 0.2368884483973185,
+    "r6_9": 0.276177982489268,
+    "r6_9_std": 0.01271473876615818,
+    "heldout_clamp": 0.8704810738563538,
+    "radial_truncate_r4": 0.8730039596557617,
+    "radial_truncate_r5": 0.8712470332781473,
+    "zero_bias": 0.2694724202156067,
+    "far_band_teacher_mse": 0.0005047963641118258,
+    "far_laplacian_energy": 0.02182058555384477,
+    "far_spectral_energy": 0.0017137436273818214,
+    "energy_r_le_4": 0.7675,
+    "energy_r_6_9": 0.0297,
+    "obl_ratio": 0.6814,
+    "mixed_hessian": 0.0272,
+    "spectral_curvature": 6.392,
+    "passes_full_gate": true,
+    "passes_far_band_gate": true,
+    "passes_gap_gate": true,
+    "passes_local_gate": true,
+    "passes_all_gates": true
+  },
+  "diagnostics": "results/v9_curvature_diagnostics_10k/"
+}

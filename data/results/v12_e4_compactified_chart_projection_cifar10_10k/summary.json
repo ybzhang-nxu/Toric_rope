@@ -1,0 +1,40 @@
+{
+  "chart_scales": [
+    2.0,
+    4.0,
+    8.0,
+    16.0
+  ],
+  "feature_budget": 108,
+  "jet_charts": [
+    "raw",
+    "bounded"
+  ],
+  "metadata": {
+    "basis": "relative_2d_table",
+    "best_step": 9000,
+    "dataset": "cifar10",
+    "final_score": 0.8376511335372925,
+    "grid_side": 8,
+    "n_heads": 8,
+    "n_layers": 6,
+    "num_features": 225,
+    "score": 0.8361638188362122,
+    "seed": 477,
+    "steps": 10000,
+    "task": "reconstruction",
+    "train_score": 0.8367145657539368
+  },
+  "num_ridge_rows": 6144,
+  "num_rows": 1536,
+  "orders": [
+    1,
+    2
+  ],
+  "output_dir": "MetricToric/results/v12_e4_compactified_chart_projection_cifar10_10k",
+  "phase_charts": [
+    "raw",
+    "asinh"
+  ],
+  "teacher_bias": "MetricToric/results/v4_cifar10_bias_export_10k/bias_exports/cifar10_reconstruction_relative_2d_table_seed477_steps10000/bias_tables.npz"
+}

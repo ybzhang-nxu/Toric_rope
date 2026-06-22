@@ -1,0 +1,44 @@
+{
+  "ext_freq_radius": 24,
+  "ext_time_radius": 16,
+  "full_freq_radius": 18,
+  "full_time_radius": 12,
+  "models": [
+    "axis_j0",
+    "toric_j0_single",
+    "toric_j0_generic_matched13",
+    "toric_j0_cluster_matched13",
+    "full_j1",
+    "full_j2",
+    "directional_j2_one",
+    "dct_matched13",
+    "coord_shuffle_full_j2"
+  ],
+  "noise_levels": [
+    0.0,
+    0.01
+  ],
+  "num_cases": 24,
+  "num_ridge_rows": 15552,
+  "num_rows": 3888,
+  "output_dir": "MetricToric/results/v13_time_frequency_jet_positive",
+  "ridge_grid": [
+    1e-12,
+    1e-10,
+    1e-08,
+    1e-06
+  ],
+  "targets": [
+    "j0_carrier",
+    "j1_time_envelope",
+    "j1_freq_envelope",
+    "j1_diag_envelope",
+    "j2_time_curvature",
+    "j2_freq_curvature",
+    "j2_mixed_envelope",
+    "j2_directional_packet",
+    "mix_j0_j1_j2"
+  ],
+  "vis_freq_radius": 12,
+  "vis_time_radius": 8
+}

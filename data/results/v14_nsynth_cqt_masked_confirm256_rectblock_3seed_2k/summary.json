@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "data_root": "data/nsynth/nsynth-test",
+  "device": "cuda",
+  "num_records": 256,
+  "train_count": 205,
+  "test_count": 51,
+  "time_frames": 128,
+  "cqt_bins": 84,
+  "patch_time": 4,
+  "patch_freq": 6,
+  "time_tokens": 32,
+  "freq_tokens": 14,
+  "mask_rate": 0.25,
+  "mask_mode": "rect_block",
+  "steps": 2000,
+  "seeds": [
+    426,
+    526,
+    626
+  ],
+  "bases": [
+    "no_pos_constant",
+    "axis_additive",
+    "toric_j0",
+    "toric_j1",
+    "toric_j2",
+    "dct_lowfreq33",
+    "toric_j2_coord_shuffle"
+  ],
+  "cache_dir": "MetricToric/results/v14_nsynth_cqt_masked_confirm256_rectblock_3seed_2k/cqt_cache",
+  "normalization": {
+    "mean_global": 0.06802209466695786,
+    "std_global": 0.21457549929618835,
+    "train_count": 205,
+    "test_count": 51
+  },
+  "results_csv": "MetricToric/results/v14_nsynth_cqt_masked_confirm256_rectblock_3seed_2k/nsynth_cqt_results.csv",
+  "aggregate_csv": "MetricToric/results/v14_nsynth_cqt_masked_confirm256_rectblock_3seed_2k/nsynth_cqt_aggregate.csv"
+}

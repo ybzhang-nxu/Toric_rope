@@ -1,0 +1,13 @@
+{
+  "status": "ok",
+  "inputs": [
+    "MetricToric/results/v17_nsynth_relative_teacher_seed426_2k/bias_exports/relative_2d_table_seed426/bias_tables.npz",
+    "MetricToric/results/v17_nsynth_relative_teacher_seeds526626_2k/bias_exports/relative_2d_table_seed526/bias_tables.npz",
+    "MetricToric/results/v17_nsynth_relative_teacher_seeds526626_2k/bias_exports/relative_2d_table_seed626/bias_tables.npz"
+  ],
+  "top_freqs": 36,
+  "dct_atoms": 73,
+  "ridge": 1e-06,
+  "num_rows": 105,
+  "num_margins": 75
+}

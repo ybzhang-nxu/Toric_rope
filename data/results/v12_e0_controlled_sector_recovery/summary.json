@@ -1,0 +1,43 @@
+{
+  "models": [
+    "axis_j0",
+    "toric_j0",
+    "full_j1",
+    "full_j2",
+    "directional_j1",
+    "directional_j2",
+    "dct_matched",
+    "coord_shuffle_j2"
+  ],
+  "noise_levels": [
+    0.0,
+    0.01,
+    0.05
+  ],
+  "num_cases": 400,
+  "num_ridge_rows": 537600,
+  "num_rows": 134400,
+  "output_dir": "MetricToric/results/v12_e0_controlled_sector_recovery",
+  "ridge_grid": [
+    1e-12,
+    1e-10,
+    1e-08,
+    1e-06
+  ],
+  "targets": [
+    "j0_cos",
+    "j0_sin",
+    "j1_x_cos",
+    "j1_y_sin",
+    "j1_u_cos",
+    "j2_xx_cos",
+    "j2_xy_sin",
+    "j2_u_cos",
+    "affine_x",
+    "affine_y",
+    "affine_xy",
+    "mix_j0_j1",
+    "mix_j0_j2",
+    "mix_axis_oblique"
+  ]
+}

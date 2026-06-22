@@ -1,0 +1,38 @@
+{
+  "checkpoints": [
+    "MetricToric/results/v8_tinyimagenet_relative_10k_3seed/checkpoints/tiny-imagenet_reconstruction_relative_2d_table_seed426_holdoutR4_steps10000_h0_b0_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v8_tinyimagenet_relative_10k_3seed/checkpoints/tiny-imagenet_reconstruction_relative_2d_table_seed526_holdoutR4_steps10000_h0_b0_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v8_tinyimagenet_relative_10k_3seed/checkpoints/tiny-imagenet_reconstruction_relative_2d_table_seed626_holdoutR4_steps10000_h0_b0_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v8_tinyimagenet_dct_top110_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_dct_top110_seed426_holdoutR4_steps10000_h1_b10_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v8_tinyimagenet_dct_top110_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_dct_top110_seed526_holdoutR4_steps10000_h1_b10_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v8_tinyimagenet_dct_top110_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_dct_top110_seed626_holdoutR4_steps10000_h1_b10_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v8_tinyimagenet_toric_pj_top220_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_table_informed_toric_PJ_R0_top220_seed426_holdoutR4_steps10000_h1_b10_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v8_tinyimagenet_toric_pj_top220_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_table_informed_toric_PJ_R0_top220_seed526_holdoutR4_steps10000_h1_b10_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v8_tinyimagenet_toric_pj_top220_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_table_informed_toric_PJ_R0_top220_seed626_holdoutR4_steps10000_h1_b10_cl20_tail0_g0_constant_s0_r0.pt",
+    "MetricToric/results/v9_tinyimagenet_farband_teacher_w3_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_mixed_toric_PJ_R0_top220_residual_dct_top32_seed426_holdoutR4_steps10000_h0_b0_cl20_tail0_g0_constant_s0_r0_contlocal_continuationr4w1f0lr1_v9bv0bd0fl0p1fm0p1fs0p01tv0p1li0fbt3r6_9.pt",
+    "MetricToric/results/v9_tinyimagenet_farband_teacher_w3_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_mixed_toric_PJ_R0_top220_residual_dct_top32_seed526_holdoutR4_steps10000_h0_b0_cl20_tail0_g0_constant_s0_r0_contlocal_continuationr4w1f0lr1_v9bv0bd0fl0p1fm0p1fs0p01tv0p1li0fbt3r6_9.pt",
+    "MetricToric/results/v9_tinyimagenet_farband_teacher_w3_10k_3seed_from_relative10k_s426/checkpoints/tiny-imagenet_reconstruction_mixed_toric_PJ_R0_top220_residual_dct_top32_seed626_holdoutR4_steps10000_h0_b0_cl20_tail0_g0_constant_s0_r0_contlocal_continuationr4w1f0lr1_v9bv0bd0fl0p1fm0p1fs0p01tv0p1li0fbt3r6_9.pt"
+  ],
+  "controls": [
+    "no_pos",
+    "radial_truncate_r4",
+    "table_clamp"
+  ],
+  "dataset": "tiny-imagenet",
+  "device": "cuda",
+  "eval_resolutions": [
+    32,
+    40,
+    48,
+    64
+  ],
+  "norm_train_limit": null,
+  "patch_dim": 48,
+  "patch_size": 4,
+  "peak_cuda_memory_bytes": 2558321664,
+  "rows": 192,
+  "state": "best",
+  "test_limit": null,
+  "train_resolution": 32,
+  "train_side": 8
+}

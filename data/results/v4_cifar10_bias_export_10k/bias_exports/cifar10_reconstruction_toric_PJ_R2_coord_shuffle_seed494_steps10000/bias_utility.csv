@@ -1,0 +1,9 @@
+dataset,task,basis,seed,mode,score,loss,delta_from_normal
+cifar10,reconstruction,toric_PJ_R2_coord_shuffle,494,normal,0.3890807628631592,0.6071428060531616,0.0
+cifar10,reconstruction,toric_PJ_R2_coord_shuffle,494,zero_bias,0.269936740398407,0.725721538066864,0.1191440224647522
+cifar10,reconstruction,toric_PJ_R2_coord_shuffle,494,shuffle_bias,0.24305284023284912,0.752514123916626,0.14602792263031006
+cifar10,reconstruction,toric_PJ_R2_coord_shuffle,494,axis_only_bias,0.34708237648010254,0.6489731669425964,0.04199838638305664
+cifar10,reconstruction,toric_PJ_R2_coord_shuffle,494,obl_residual_only_bias,0.2705565094947815,0.7251164317131042,0.11852425336837769
+cifar10,reconstruction,toric_PJ_R2_coord_shuffle,494,axis_plus_obl_residual,0.3493216633796692,0.6467403173446655,0.03975909948348999
+cifar10,reconstruction,toric_PJ_R2_coord_shuffle,494,axis_plus_shuffled_residual,0.30106139183044434,0.6947867274284363,0.08801937103271484
+cifar10,reconstruction,toric_PJ_R2_coord_shuffle,494,topk_spectrum_only_bias,0.3038061261177063,0.6920263171195984,0.08527463674545288
