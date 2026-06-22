@@ -313,7 +313,7 @@ def plot_v15() -> None:
     recon_lim = float(np.max(np.abs(np.stack(recon_values))))
     resid_lim = float(np.max(np.abs(np.stack(residual_values[1:]))))
 
-    fig, axes = plt.subplots(2, 4, figsize=(7.4, 3.95))
+    fig, axes = plt.subplots(2, 4, figsize=(7.75, 4.08))
     top_titles = ["Observed", f"J0 fit\n$R^2$={r2s[0]:.3f}", f"J1 fit\n$R^2$={r2s[1]:.3f}", f"J2 fit\n$R^2$={r2s[2]:.3f}"]
     for idx, arr in enumerate(recon_values):
         ax = axes[0, idx]
@@ -338,10 +338,14 @@ def plot_v15() -> None:
         if idx > 1:
             ax.set_yticklabels([])
         ax.set_xlabel(r"$\Delta f$", fontsize=8)
-    fig.colorbar(im, ax=axes[0, :].ravel().tolist(), fraction=0.025, pad=0.012)
-    fig.colorbar(im_res, ax=axes[1, 1:].ravel().tolist(), fraction=0.025, pad=0.012)
+    # Use explicit colorbar axes so the bars do not collide with the rightmost
+    # panel titles after LaTeX scales the PDF.
+    cax_top = fig.add_axes([0.905, 0.565, 0.016, 0.255])
+    cax_bottom = fig.add_axes([0.905, 0.190, 0.016, 0.255])
+    fig.colorbar(im, cax=cax_top)
+    fig.colorbar(im_res, cax=cax_bottom)
     fig.suptitle("MT-A05 NSynth/CQT empirical offset field and nested Toric PJ fits", y=0.96, fontsize=11)
-    fig.subplots_adjust(left=0.035, right=0.94, top=0.82, bottom=0.08, wspace=0.08, hspace=0.36)
+    fig.subplots_adjust(left=0.050, right=0.885, top=0.82, bottom=0.09, wspace=0.12, hspace=0.42)
     save(fig, "fig_mta05_nsynth_empirical_projection.pdf", tight=False)
 
 
