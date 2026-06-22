@@ -7,6 +7,10 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
+plt.rcParams["pdf.fonttype"] = 42
+plt.rcParams["ps.fonttype"] = 42
+plt.rcParams["text.usetex"] = False
+
 
 PROJECT_DIR = Path(__file__).resolve().parents[2]
 PAPER_DIR = PROJECT_DIR / "paper"
@@ -18,6 +22,7 @@ GREEN = "#3f8f5f"
 ORANGE = "#c77c2f"
 RED = "#a6423a"
 PURPLE = "#7357a6"
+TEAL = "#0f8f91"
 GRAY = "#6e7781"
 LIGHT_GRAY = "#d7dce2"
 
@@ -49,7 +54,7 @@ def save(fig: plt.Figure, name: str, *, tight: bool = True) -> None:
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     if tight:
         fig.tight_layout()
-    fig.savefig(FIGURES_DIR / name, bbox_inches="tight", pad_inches=0.06)
+    fig.savefig(FIGURES_DIR / name, bbox_inches="tight", pad_inches=0.06, dpi=300)
     plt.close(fig)
 
 
@@ -70,64 +75,122 @@ def plot_v12_sector_intervention() -> None:
         / "v12_e5_sector_intervention_cifar10_top110_30k_3seed"
         / "sector_intervention_results.csv"
     )
-    panels = [
-        (
-            "Keep-only",
-            [
-                ("full", "all_positional", "Full", GRAY),
-                ("keep", "axial_J0", "Axial only", BLUE),
-                ("keep", "oblique_J0", "Oblique only", GREEN),
-                ("zero_bias", "none", "Zero bias", RED),
-            ],
-        ),
-        (
-            "Complementary ablation",
-            [
-                ("full", "all_positional", "Full", GRAY),
-                ("ablate", "axial_J0", "Ablate axial", BLUE),
-                ("ablate", "oblique_J0", "Ablate oblique", GREEN),
-                ("zero_bias", "none", "Zero bias", RED),
-            ],
-        ),
+    specs = [
+        ("full", "all_positional", "Full", GRAY),
+        ("keep", "axial_J0", "Axial component", BLUE),
+        ("keep", "oblique_J0", "Oblique component", GREEN),
+        ("zero_bias", "none", "Zero bias", RED),
     ]
 
-    fig, axes = plt.subplots(1, 2, figsize=(7.3, 3.25), sharex=True)
-    for ax, (title, specs) in zip(axes, panels):
-        values_by_label: list[list[float]] = []
-        for mode, sector, _, _ in specs:
-            vals = [
-                f(row, "score")
-                for row in rows
-                if row["eval_mode"] == mode and row["sector"] == sector
-            ]
-            values_by_label.append(vals)
-
-        y = np.arange(len(specs))
-        for idx, vals in enumerate(values_by_label):
-            color = specs[idx][3]
-            mean = float(np.mean(vals))
-            std = float(np.std(vals, ddof=0))
-            ax.errorbar(
-                mean,
-                y[idx],
-                xerr=std,
-                fmt="o",
-                color=color,
-                markersize=5,
-                capsize=3,
-                zorder=3,
-            )
-            jitter = np.linspace(-0.12, 0.12, len(vals)) if len(vals) > 1 else np.array([0.0])
-            ax.scatter(vals, y[idx] + jitter, s=18, color=color, alpha=0.45, zorder=2)
-        ax.set_yticks(y, [label for _, _, label, _ in specs])
-        ax.invert_yaxis()
-        ax.set_xlabel(r"Masked reconstruction $R^2$")
-        ax.set_title(title)
-        ax.set_xlim(0.0, 0.83)
-        clean_axis(ax)
-    fig.suptitle("CIFAR sector intervention, 3 seeds", y=0.99, fontsize=10.5)
-    fig.subplots_adjust(top=0.82, wspace=0.35)
+    fig, ax = plt.subplots(figsize=(5.7, 2.9))
+    y = np.arange(len(specs))
+    for idx, (mode, sector, label, color) in enumerate(specs):
+        vals = [
+            f(row, "score")
+            for row in rows
+            if row["eval_mode"] == mode and row["sector"] == sector
+        ]
+        mean = float(np.mean(vals))
+        std = float(np.std(vals, ddof=0))
+        ax.barh(idx, mean, color=color, alpha=0.22, edgecolor=color, height=0.58)
+        ax.errorbar(
+            mean,
+            idx,
+            xerr=std,
+            fmt="o",
+            color=color,
+            markersize=5,
+            capsize=3,
+            zorder=3,
+        )
+        jitter = np.linspace(-0.11, 0.11, len(vals)) if len(vals) > 1 else np.array([0.0])
+        ax.scatter(vals, idx + jitter, s=20, color=color, alpha=0.52, zorder=2)
+        ax.text(mean + 0.018, idx, f"{mean:.3f}", va="center", ha="left", fontsize=7.5)
+    ax.set_yticks(y, [label for _, _, label, _ in specs])
+    ax.invert_yaxis()
+    ax.set_xlabel(r"Masked reconstruction $R^2$")
+    ax.set_title("CIFAR J0 sector intervention, 3 seeds")
+    ax.set_xlim(0.0, 0.84)
+    clean_axis(ax)
+    fig.subplots_adjust(left=0.26, right=0.96, top=0.84, bottom=0.20)
     save(fig, "fig_mta02_cifar_sector_intervention.pdf")
+
+
+def plot_v08_boundary_holdout() -> None:
+    raw_rows = read_csv(RESULTS_DIR / "v4_offset_holdout_cifar10_10k" / "offset_holdout_aggregate.csv")
+    dct_eval_rows = read_csv(
+        RESULTS_DIR
+        / "v4_offset_holdout_eval_controls_dct_h1b10_cifar10_10k"
+        / "offset_holdout_eval_controls_aggregate.csv"
+    )
+    dct_reg_rows = read_csv(
+        RESULTS_DIR
+        / "v4_offset_holdout_eval_controls_dct_h1b10_cifar10_10k"
+        / "offset_holdout_aggregate.csv"
+    )
+
+    raw_specs = [
+        ("Table\nlookup", "relative_2d_table", GRAY),
+        ("DCT\nraw", "dct_top33", ORANGE),
+        ("Toric\nraw", "table_informed_toric_PJ_R0_top110", BLUE),
+        ("Axis+PJ\nraw", "axis_plus_toric_residual_R0_top55", TEAL),
+    ]
+    policy_specs = [
+        ("Raw", "raw", ""),
+        ("Reg.", "reg", ""),
+        ("Clamp", "heldout_clamp", ""),
+        ("Decay\n$\\gamma$=1", "radial_decay", "gamma=1"),
+        ("Zero-fill", "visible_only", ""),
+    ]
+
+    fig, axes = plt.subplots(1, 2, figsize=(7.75, 3.05), gridspec_kw={"width_ratios": [1.05, 1.05]})
+
+    ax = axes[0]
+    x = np.arange(len(raw_specs))
+    raw_scores = [f(pick(raw_rows, basis=basis), "final_score_mean") for _, basis, _ in raw_specs]
+    raw_colors = [color for _, _, color in raw_specs]
+    bars = ax.bar(x, raw_scores, color=raw_colors, alpha=0.88)
+    for xpos, val in zip(x, raw_scores):
+        va = "bottom" if val >= 0 else "top"
+        dy = 0.025 if val >= 0 else -0.025
+        ax.text(xpos, val + dy, f"{val:.3f}", ha="center", va=va, fontsize=7)
+    ax.axhline(0.0, color="#333333", linewidth=0.8)
+    ax.set_title("Raw functional continuation")
+    ax.set_ylabel(r"Full-task $R^2$")
+    ax.set_xticks(x, [label for label, _, _ in raw_specs])
+    ax.tick_params(axis="x", labelsize=8.5)
+    ax.set_ylim(-0.16, 0.90)
+    clean_axis(ax)
+
+    ax = axes[1]
+    raw_dct = pick(raw_rows, basis="dct_top33")
+    reg_dct = dct_reg_rows[0]
+    values = []
+    for label, mode, param in policy_specs:
+        if mode == "raw":
+            values.append(f(raw_dct, "final_score_mean"))
+        elif mode == "reg":
+            values.append(f(reg_dct, "final_score_mean"))
+        else:
+            row = pick(dct_eval_rows, eval_mode=mode, eval_param=param)
+            values.append(f(row, "score_mean"))
+    x = np.arange(len(policy_specs))
+    bars = ax.bar(x, values, color=[ORANGE, ORANGE, GRAY, PURPLE, TEAL], alpha=0.88)
+    for xpos, val in zip(x, values):
+        va = "bottom" if val >= 0 else "top"
+        dy = 0.025 if val >= 0 else -0.025
+        ax.text(xpos, val + dy, f"{val:.3f}", ha="center", va=va, fontsize=7)
+    ax.axhline(0.0, color="#333333", linewidth=0.8)
+    ax.set_title("DCT boundary-policy sweep")
+    ax.set_ylabel(r"Full-task $R^2$")
+    ax.set_xticks(x, [label for label, _, _ in policy_specs])
+    ax.tick_params(axis="x", labelsize=8.0)
+    ax.set_ylim(-0.16, 0.86)
+    clean_axis(ax)
+
+    fig.suptitle("MT-A08 masked-offset deployment diagnostics", y=0.98, fontsize=10.5)
+    fig.subplots_adjust(left=0.085, right=0.985, top=0.79, bottom=0.22, wspace=0.32)
+    save(fig, "fig_mta08_boundary_holdout.pdf", tight=False)
 
 
 def canonical_freq_key(kt: int, kf: int) -> tuple[int, int]:
@@ -598,6 +661,7 @@ def plot_v18() -> None:
 
 def main() -> None:
     plot_v12_sector_intervention()
+    plot_v08_boundary_holdout()
     plot_v13()
     plot_v15()
     plot_v16()

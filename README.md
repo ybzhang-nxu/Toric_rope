@@ -2,9 +2,10 @@
 
 This bundle is the artifact package for the current paper draft,
 **Toric PJ Position Spaces for Scalar Two-Dimensional Relative Attention**.
-It is intended to be uploaded directly as a public GitHub repository root, or
-kept as `MetricToric/reproducibility/paper_bundle/` inside the larger working
-tree.  The artifact IDs here match the paper's Artifact Index.
+The public repository is <https://github.com/ybzhang-nxu/Toric_rope>.  The
+bundle may be uploaded directly as a public GitHub repository root, or kept as
+`MetricToric/reproducibility/paper_bundle/` inside the larger working tree.
+The artifact IDs here match the paper's Artifact Index.
 
 The bundle is intentionally scoped to experiments that appear in the current
 paper or its appendices.  It copies the code snapshot, paper figure outputs,
